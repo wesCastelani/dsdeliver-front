@@ -5,7 +5,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
 
 export function fetchProducts() {
-  return axios(`https://dashboard.heroku.com/apps/sds-dsdeliver-wes/products`);
+  return axios(`https://sds-dsdeliver-wes.herokuapp.com/products`);
 }
 
 export function fetchLocalMapBox(local: string) {
@@ -15,5 +15,5 @@ export function fetchLocalMapBox(local: string) {
 }
 
 export function saveOrder(payload: OrderPayLoad) {
-  return axios.post(`https://dashboard.heroku.com/apps/sds-dsdeliver-wes/orders`, payload);
+  return axios.post(`https://sds-dsdeliver-wes.herokuapp.com/orders`, payload);
 }
